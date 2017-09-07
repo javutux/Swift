@@ -12,11 +12,15 @@ import Foundation
 class ViewController: UIViewController {
     
     //VARIABLES
-    
-    
+    //| let | screenSize | :String | = | String("something")
+   
     //FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth: Int = Int(screenSize.width)
+        let screenHeight: Int = Int(screenSize.height)
  
         var zooCollection:[String:Animal] = [String:Animal]()
     
@@ -26,12 +30,12 @@ class ViewController: UIViewController {
         zooCollection["animal1"]?.nameMe(title: "Tommy")
         zooCollection["animal1"]?.setImage(imageName: "Tom")
         zooCollection["animal1"]?.move()
-        zooCollection["animal1"]?.setLocation(valuex: 200, valuey: 200)
+        zooCollection["animal1"]?.setLocation(valuex: screenWidth/2 - 50, valuey: screenHeight - 120)
 
         zooCollection["animal2"]?.nameMe(title: "Jerry")
         zooCollection["animal2"]?.setImage(imageName: "Jerry")
         zooCollection["animal2"]?.eat()
-        zooCollection["animal2"]?.setLocation(valuex: 20, valuey: 20)
+        zooCollection["animal2"]?.setLocation(valuex: screenWidth/2 - 50, valuey: 0)
             
         view.addSubview(zooCollection["animal1"]!)
         view.addSubview(zooCollection["animal2"]!)

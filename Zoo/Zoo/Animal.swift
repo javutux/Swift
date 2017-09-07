@@ -19,6 +19,8 @@ class Animal: UIView {
     var imageName:String = "Tom.jpg"
     var image:UIImage? = UIImage(named: "Tom.jpg")
     var imageView:UIImageView!
+    
+    
 //CONSTRUCTORS
     
     init() {
@@ -66,9 +68,6 @@ class Animal: UIView {
     func setLocation(valuex:Int,valuey:Int){
         self.frame.origin = CGPoint(x: valuex, y: valuey)
     }
-    
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
