@@ -22,10 +22,7 @@ class Animal: UIView {
 //CONSTRUCTORS
     
     init() {
-        let rx = CGFloat((arc4random_uniform(20) + 1) * 10);
-        let ry = CGFloat((arc4random_uniform(20) + 1) * 10);
-        
-        super.init(frame: CGRect(x: rx, y: ry, width: 100, height: 120))
+        super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 120))
         
         self.backgroundColor = UIColor.red
         
@@ -62,8 +59,16 @@ class Animal: UIView {
     func setImage(imageName:String) {
         image = UIImage(named: imageName)
         imageView.image = image
-        print("hello")
+    
     }
+    
+    
+    func setLocation(valuex:Int,valuey:Int){
+        self.frame.origin = CGPoint(x: valuex, y: valuey)
+    }
+    
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
