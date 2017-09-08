@@ -12,7 +12,6 @@ import Foundation
 class ViewController: UIViewController {
     
     //VARIABLES
-    //| let | screenSize | :String | = | String("something")
    
     //FUNCTIONS
     override func viewDidLoad() {
@@ -35,10 +34,16 @@ class ViewController: UIViewController {
         zooCollection["animal2"]?.nameMe(title: "Jerry")
         zooCollection["animal2"]?.setImage(imageName: "Jerry")
         zooCollection["animal2"]?.eat()
-        zooCollection["animal2"]?.setLocation(valuex: screenWidth/2 - 50, valuey: 0)
-            
+        zooCollection["animal2"]?.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
+        
         view.addSubview(zooCollection["animal1"]!)
         view.addSubview(zooCollection["animal2"]!)
+        
+        
+        var scorePanel = [String:Counter]()
+        
+        view.addSubview(Counter.init())
+
         view.backgroundColor = UIColor.blue
     
     }

@@ -11,7 +11,7 @@ import UIKit
 
 class Animal: UIView {
     
-//VARIABLES
+//VARIABLES is a field that represents (data of the class (in this case animal))
     var name:String?
     var kind:String?
     var location:String?
@@ -21,20 +21,19 @@ class Animal: UIView {
     var imageView:UIImageView!
     
     
-//CONSTRUCTORS
+//CONSTRUCTORS (method that instantiate a class(common things to all animals))
     
     init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 100, height: 120))
-        
         self.backgroundColor = UIColor.red
         
-        //add button
+//add button
         animalTitle = UIButton(frame: CGRect(x: 0, y: 100, width: 100, height: 20))
         animalTitle!.setTitle("Ok", for: UIControlState.normal)
         self.addSubview(animalTitle!)
         animalTitle!.addTarget(self, action: #selector(Animal.buttonClicked(_:)), for: .touchUpInside)
         
-        //add image
+//add image
         self.imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         self.addSubview(imageView)
@@ -63,7 +62,6 @@ class Animal: UIView {
         imageView.image = image
     
     }
-    
     
     func setLocation(valuex:Int,valuey:Int){
         self.frame.origin = CGPoint(x: valuex, y: valuey)

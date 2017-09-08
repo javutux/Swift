@@ -16,6 +16,7 @@
 		FF1A4A4D1F488B9E00E91CBD /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A4C1F488B9E00E91CBD /* ZooTests.swift */; };
 		FF1A4A581F488B9F00E91CBD /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A571F488B9F00E91CBD /* ZooUITests.swift */; };
 		FF1A4A661F488D4300E91CBD /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A651F488D4300E91CBD /* Animal.swift */; };
+		FF76D1A21F62FC6000099619 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76D1A11F62FC6000099619 /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		FF1A4A571F488B9F00E91CBD /* ZooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITests.swift; sourceTree = "<group>"; };
 		FF1A4A591F488B9F00E91CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1A4A651F488D4300E91CBD /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		FF76D1A11F62FC6000099619 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				FF1A4A401F488B9D00E91CBD /* LaunchScreen.storyboard */,
 				FF1A4A341F488B9D00E91CBD /* AppDelegate.swift */,
 				FF1A4A361F488B9D00E91CBD /* ViewController.swift */,
+				FF76D1A11F62FC6000099619 /* Counter.swift */,
 				FF1A4A651F488D4300E91CBD /* Animal.swift */,
 			);
 			path = Zoo;
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF76D1A21F62FC6000099619 /* Counter.swift in Sources */,
 				FF1A4A3D1F488B9D00E91CBD /* Zoo.xcdatamodeld in Sources */,
 				FF1A4A661F488D4300E91CBD /* Animal.swift in Sources */,
 				FF1A4A371F488B9D00E91CBD /* ViewController.swift in Sources */,
