@@ -20,29 +20,32 @@ class ViewController: UIViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth: Int = Int(screenSize.width)
         let screenHeight: Int = Int(screenSize.height)
- 
-        var zooCollection:[String:Animal] = [String:Animal]()
-    
-        zooCollection["animal1"] = Animal()
-        zooCollection["animal2"] = Animal()
+        
+       // var zooCollection:[String:Animal] = [String:Animal]()
+       
+        var jerry:Animal = Animal()
+        var tom:Animal = Animal()
+        var counter:Counter = Counter()
+//        var level:Counter = Counter()
 
-        zooCollection["animal1"]?.nameMe(title: "Tommy")
-        zooCollection["animal1"]?.setImage(imageName: "Tom")
-        zooCollection["animal1"]?.move()
-        zooCollection["animal1"]?.setLocation(valuex: screenWidth/2 - 50, valuey: screenHeight - 120)
+        tom.nameMe(title: "Tommy")
+        tom.setImage(imageName: "Tom")
+        tom.move()
+        tom.setLocation(valuex: screenWidth/2 - 50, valuey: screenHeight - 120)
 
-        zooCollection["animal2"]?.nameMe(title: "Jerry")
-        zooCollection["animal2"]?.setImage(imageName: "Jerry")
-        zooCollection["animal2"]?.eat()
-        zooCollection["animal2"]?.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
-        
-        view.addSubview(zooCollection["animal1"]!)
-        view.addSubview(zooCollection["animal2"]!)
+        jerry.nameMe(title: "Jerry")
+        jerry.setImage(imageName: "Jerry")
+        jerry.eat()
+        jerry.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
         
         
-        var scorePanel = [String:Counter]()
+        counter.setScore(score: 500)
+        counter.setLevel(level: 1)
         
-        view.addSubview(Counter.init())
+        view.addSubview(jerry)
+        view.addSubview(tom)
+        view.addSubview(counter)
+//        view.addSubview(level)
 
         view.backgroundColor = UIColor.blue
     

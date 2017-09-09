@@ -13,7 +13,8 @@ class Counter: UIView {
 
     var counterSize:UIButton?
     var position:String?
-    
+    var counterScore:UILabel?
+    var counterLevel:UILabel?
     
     init() {
         
@@ -21,25 +22,24 @@ class Counter: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width:screenSize.width, height:50))
         self.backgroundColor = UIColor.green
     
-        var counterLevel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
-        counterLevel.text = "Level 1"
-        addSubview(counterLevel)
+        counterLevel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 50))
+        addSubview(counterLevel!)
         
-        var counterScore:UILabel = UILabel(frame: CGRect(x: screenSize.width - 100, y: 0, width: 100, height: 50))
-        counterScore.textAlignment = NSTextAlignment.right;
-        counterScore.text = "Score 200"
-        addSubview(counterScore)
+        counterScore = UILabel(frame: CGRect(x: screenSize.width - 100, y: 0, width: 100, height: 50))
+        counterScore!.textAlignment = NSTextAlignment.right;
+        addSubview(counterScore!)
 }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setScore(){
+    func setScore(score:Int){
+        counterScore!.text = "Score " + String(score)
         
     }
     
-    func setLevel(){
-        
-    }
+    func setLevel(level:Int){
+         counterLevel!.text = "Level " + String(level)
+ }
 }
