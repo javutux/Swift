@@ -26,7 +26,7 @@ class ViewController: UIViewController {
        
         var counter:Counter = Counter()
             
-        tom.nameMe(title: "Tommy")
+        tom.nameMe(title: "Tom")
         tom.setImage(imageName: "Tom")
         tom.move()
         tom.setLocation(valuex: screenWidth/2 - 50, valuey: screenHeight - 120)
