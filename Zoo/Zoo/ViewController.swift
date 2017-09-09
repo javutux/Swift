@@ -12,7 +12,9 @@ import Foundation
 class ViewController: UIViewController {
     
     //VARIABLES
-   
+    var jerry:Animal = Animal()
+    
+    
     //FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,14 +22,12 @@ class ViewController: UIViewController {
         let screenSize: CGRect = UIScreen.main.bounds
         let screenWidth: Int = Int(screenSize.width)
         let screenHeight: Int = Int(screenSize.height)
-        
-       // var zooCollection:[String:Animal] = [String:Animal]()
        
-        var jerry:Animal = Animal()
         var tom:Animal = Animal()
         var counter:Counter = Counter()
-//        var level:Counter = Counter()
-
+        
+ //      var score = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
+            
         tom.nameMe(title: "Tommy")
         tom.setImage(imageName: "Tom")
         tom.move()
@@ -39,16 +39,29 @@ class ViewController: UIViewController {
         jerry.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
         
         
-        counter.setScore(score: 500)
-        counter.setLevel(level: 1)
+        counter.setScore(score: 99)
+        counter.setLevel(level: 30)
         
         view.addSubview(jerry)
         view.addSubview(tom)
         view.addSubview(counter)
-//        view.addSubview(level)
 
         view.backgroundColor = UIColor.blue
+        
+        
+        
+        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.bgTapped))
+        view.addGestureRecognizer(gesture)
     
+    }
+    
+    @objc
+    func bgTapped(sender: UITapGestureRecognizer) {
+        let point = sender.location(in: self.view)
+        let px = Int(point.x)
+        let py = Int(point.y)
+        jerry.setLocation(valuex: px - 50, valuey: py - 50)
+        print("Location: " + String(describing: px) + ":" + String (describing: py))
     }
     
     override func didReceiveMemoryWarning() {
