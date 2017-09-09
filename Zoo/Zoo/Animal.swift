@@ -19,7 +19,7 @@ class Animal: UIView {
     var imageName:String = "Tom.jpg"
     var image:UIImage? = UIImage(named: "Tom.jpg")
     var imageView:UIImageView!
-    
+    var speed:Int = 4
     
 //CONSTRUCTORS (method that instantiate a class(common things to all animals))
     
@@ -50,7 +50,7 @@ class Animal: UIView {
         print("Click me " + name!)
 
     }
-   
+    
     func nameMe(title:String) {
         self.name = title
         animalTitle!.setTitle(title, for: UIControlState.normal)
@@ -60,15 +60,31 @@ class Animal: UIView {
     func setImage(imageName:String) {
         image = UIImage(named: imageName)
         imageView.image = image
-    
     }
     
     func setLocation(valuex:Int,valuey:Int){
         self.frame.origin = CGPoint(x: valuex, y: valuey)
     }
     
+    func chaseAnimal(target:Animal) {
+        let x = Int(target.frame.origin.x)
+        let y = Int(target.frame.origin.y)
+        setTarget(valuex: x - 50, valuey: y - 50)
+        print("gooood")
+    }
+    
+    func setTarget(valuex:Int,valuey:Int) {
+        UIView.animate(withDuration: TimeInterval(speed)) {
+            self.frame.origin = CGPoint(x: valuex, y: valuey)
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    func setspeed(level:Int){
+        speed = level
     }
     
     func move(){

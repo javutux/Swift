@@ -15,6 +15,7 @@ class Counter: UIView {
     var position:String?
     var counterScore:UILabel?
     var counterLevel:UILabel?
+    var currentScore:Int = 0
     
     init() {
         
@@ -28,15 +29,24 @@ class Counter: UIView {
         counterScore = UILabel(frame: CGRect(x: screenSize.width - 100, y: 0, width: 100, height: 50))
         counterScore!.textAlignment = NSTextAlignment.right;
         addSubview(counterScore!)
-}
+    
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func startTimer() {
+        let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerTick), userInfo: nil, repeats: true)
+    }
+    
+    @objc func timerTick() {
+        currentScore = currentScore + 1
+        setScore(score: currentScore)
+    }
+    
     func setScore(score:Int){
         counterScore!.text = "Score " + String(score)
-        
     }
     
     func setLevel(level:Int){

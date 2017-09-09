@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     //VARIABLES
     var jerry:Animal = Animal()
+    var tom:Animal = Animal()
     
     
     //FUNCTIONS
@@ -23,10 +24,7 @@ class ViewController: UIViewController {
         let screenWidth: Int = Int(screenSize.width)
         let screenHeight: Int = Int(screenSize.height)
        
-        var tom:Animal = Animal()
         var counter:Counter = Counter()
-        
- //      var score = Timer.scheduledTimer(timeInterval: 0.4, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
             
         tom.nameMe(title: "Tommy")
         tom.setImage(imageName: "Tom")
@@ -37,9 +35,9 @@ class ViewController: UIViewController {
         jerry.setImage(imageName: "Jerry")
         jerry.eat()
         jerry.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
+        jerry.setspeed(level: 1)
         
-        
-        counter.setScore(score: 99)
+        counter.startTimer()
         counter.setLevel(level: 30)
         
         view.addSubview(jerry)
@@ -60,9 +58,11 @@ class ViewController: UIViewController {
         let point = sender.location(in: self.view)
         let px = Int(point.x)
         let py = Int(point.y)
-        jerry.setLocation(valuex: px - 50, valuey: py - 50)
+        jerry.setTarget(valuex: px - 50, valuey: py - 50)
+        tom.chaseAnimal(target: jerry)
         print("Location: " + String(describing: px) + ":" + String (describing: py))
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
