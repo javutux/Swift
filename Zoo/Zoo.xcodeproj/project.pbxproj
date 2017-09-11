@@ -108,11 +108,11 @@
 				FF1A4A3B1F488B9D00E91CBD /* Zoo.xcdatamodeld */,
 				FF1A4A381F488B9D00E91CBD /* Main.storyboard */,
 				FF1A4A401F488B9D00E91CBD /* LaunchScreen.storyboard */,
-				FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */,
-				FF1A4A361F488B9D00E91CBD /* GameViewController.swift */,
 				FF1A4A341F488B9D00E91CBD /* AppDelegate.swift */,
+				FF1A4A361F488B9D00E91CBD /* GameViewController.swift */,
 				FF76D1A11F62FC6000099619 /* Counter.swift */,
 				FF1A4A651F488D4300E91CBD /* Animal.swift */,
+				FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */,
 			);
 			path = Zoo;
 			sourceTree = "<group>";
