@@ -9,7 +9,8 @@
 import UIKit
 import Foundation
     
-class ViewController: UIViewController {
+class GameViewController: UIViewController {
+    @IBOutlet var Controllermain: [UIView]!
     
     //VARIABLES
     var jerry:Animal = Animal()
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
         
         
         
-        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.bgTapped))
+        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameViewController.bgTapped))
         view.addGestureRecognizer(gesture)
     
     }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF1A4A351F488B9D00E91CBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A341F488B9D00E91CBD /* AppDelegate.swift */; };
-		FF1A4A371F488B9D00E91CBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A361F488B9D00E91CBD /* ViewController.swift */; };
+		FF1A4A371F488B9D00E91CBD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A361F488B9D00E91CBD /* GameViewController.swift */; };
 		FF1A4A3A1F488B9D00E91CBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF1A4A381F488B9D00E91CBD /* Main.storyboard */; };
 		FF1A4A3D1F488B9D00E91CBD /* Zoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A3B1F488B9D00E91CBD /* Zoo.xcdatamodeld */; };
 		FF1A4A3F1F488B9D00E91CBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF1A4A3E1F488B9D00E91CBD /* Assets.xcassets */; };
@@ -16,6 +16,7 @@
 		FF1A4A4D1F488B9E00E91CBD /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A4C1F488B9E00E91CBD /* ZooTests.swift */; };
 		FF1A4A581F488B9F00E91CBD /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A571F488B9F00E91CBD /* ZooUITests.swift */; };
 		FF1A4A661F488D4300E91CBD /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A651F488D4300E91CBD /* Animal.swift */; };
+		FF2A4BE01F671AC70006B5D5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */; };
 		FF76D1A21F62FC6000099619 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76D1A11F62FC6000099619 /* Counter.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		FF1A4A311F488B9D00E91CBD /* Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1A4A341F488B9D00E91CBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF1A4A361F488B9D00E91CBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF1A4A361F488B9D00E91CBD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FF1A4A391F488B9D00E91CBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF1A4A3C1F488B9D00E91CBD /* Zoo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zoo.xcdatamodel; sourceTree = "<group>"; };
 		FF1A4A3E1F488B9D00E91CBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		FF1A4A571F488B9F00E91CBD /* ZooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITests.swift; sourceTree = "<group>"; };
 		FF1A4A591F488B9F00E91CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1A4A651F488D4300E91CBD /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		FF76D1A11F62FC6000099619 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,9 +109,10 @@
 				FF1A4A381F488B9D00E91CBD /* Main.storyboard */,
 				FF1A4A401F488B9D00E91CBD /* LaunchScreen.storyboard */,
 				FF1A4A341F488B9D00E91CBD /* AppDelegate.swift */,
-				FF1A4A361F488B9D00E91CBD /* ViewController.swift */,
+				FF1A4A361F488B9D00E91CBD /* GameViewController.swift */,
 				FF76D1A11F62FC6000099619 /* Counter.swift */,
 				FF1A4A651F488D4300E91CBD /* Animal.swift */,
+				FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */,
 			);
 			path = Zoo;
 			sourceTree = "<group>";
@@ -266,7 +269,8 @@
 				FF76D1A21F62FC6000099619 /* Counter.swift in Sources */,
 				FF1A4A3D1F488B9D00E91CBD /* Zoo.xcdatamodeld in Sources */,
 				FF1A4A661F488D4300E91CBD /* Animal.swift in Sources */,
-				FF1A4A371F488B9D00E91CBD /* ViewController.swift in Sources */,
+				FF2A4BE01F671AC70006B5D5 /* IntroViewController.swift in Sources */,
+				FF1A4A371F488B9D00E91CBD /* GameViewController.swift in Sources */,
 				FF1A4A351F488B9D00E91CBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
