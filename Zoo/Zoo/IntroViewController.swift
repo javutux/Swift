@@ -11,11 +11,24 @@ import Foundation
 
 class IntroViewController: UIViewController {
     
+    @IBOutlet weak var playButton: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(IntroViewController.tbplay))
+        playButton.addGestureRecognizer(gesture)
+        
+        playButton.isUserInteractionEnabled = true
+        
     }
+
     
+    @objc
+    func tbplay(sender: UITapGestureRecognizer) {
+       print("bird")
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
