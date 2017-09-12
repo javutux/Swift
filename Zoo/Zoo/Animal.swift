@@ -19,7 +19,7 @@ class Animal: UIView {
     var imageName:String = "Tom.jpg"
     var image:UIImage? = UIImage(named: "Tom.jpg")
     var imageView:UIImageView!
-    var speed:Int = 3
+    var speed:Int = 2
     
 //CONSTRUCTORS (method that instantiate a class(common things to all animals))
     

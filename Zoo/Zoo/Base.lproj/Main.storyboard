@@ -63,6 +63,16 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jU-kG-zHE">
+                                <rect key="frame" x="227" y="596" width="91" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Click:" destination="3Of-lw-3i3" eventType="touchUpInside" id="U7P-ob-7nL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82437400670000005" green="1" blue="0.41862978769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration" label="Pay button"/>
@@ -71,6 +81,7 @@
                     <connections>
                         <outlet property="playButton" destination="6wI-bq-1hc" id="zkQ-az-rmP"/>
                         <outlet property="view" destination="6wI-bq-1hc" id="rx8-aa-gc9"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="SecondViewSegue" id="ZX9-gQ-Lzd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIZ-jC-3Ue" userLabel="First Responder" sceneMemberID="firstResponder"/>
