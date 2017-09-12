@@ -11,15 +11,6 @@ import Foundation
 
 class IntroViewController: UIViewController {
     
-    @IBAction func Click(_ sender: UIButton) {
-    
-        print("click")
-        
-        self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
-    
-    }
-
-    
     @IBOutlet weak var playButton: UIImageView!
     
     override func viewDidLoad() {
@@ -31,16 +22,15 @@ class IntroViewController: UIViewController {
         playButton.isUserInteractionEnabled = true
         
     }
-
-    
-    
-    @objc func tbplay(sender: UITapGestureRecognizer) {
-       print("bird")
-    }
-    
-//    @IBAction override func reloadInputViews() {
-//      
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//     //self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
 //    }
+
+    @objc func tbplay(sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
+        print("bird")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
