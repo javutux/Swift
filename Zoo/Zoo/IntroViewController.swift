@@ -24,8 +24,7 @@ class IntroViewController: UIViewController {
     }
 
     
-    @objc
-    func tbplay(sender: UITapGestureRecognizer) {
+    @objc func tbplay(sender: UITapGestureRecognizer) {
        print("bird")
     }
 
