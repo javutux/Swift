@@ -25,7 +25,7 @@ class GameViewController: UIViewController {
         let screenWidth: Int = Int(screenSize.width)
         let screenHeight: Int = Int(screenSize.height)
        
-        var counter:Counter = Counter()
+        let counter:Counter = Counter()
             
         tom.nameMe(title: "Tom")
         tom.setImage(imageName: "Tom")
@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
         jerry.setImage(imageName: "Jerry")
         jerry.eat()
         jerry.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
-        jerry.setspeed(level: 1)
+        jerry.setspeed(level: 2)
         
         counter.startTimer()
         counter.setLevel(level: 0)

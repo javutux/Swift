@@ -47,18 +47,22 @@ class Counter: UIView {
     
     func setScore(score:Int){
         
-        if (score == 30) {
+        if (score == 15) {
             setLevel(level: 1);
         }
-        if (score == 60) {
+        if (score == 30) {
             setLevel(level: 2);
         }
-        if (score == 120) {
+        if (score == 45) {
             setLevel(level: 3);
         }
         
-        if (score == 180) {
+        if (score == 60) {
             setLevel(level: 4);
+        }
+        
+        if (score == 75) {
+            setLevel(level: 5);
         }
         
         counterScore!.text = "Score " + String(score)
