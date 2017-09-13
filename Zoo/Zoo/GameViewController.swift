@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
         jerry.setspeed(level: 1)
         
         counter.startTimer()
-        counter.setLevel(level: 30)
+        counter.setLevel(level: 0)
         
         view.addSubview(jerry)
         view.addSubview(tom)

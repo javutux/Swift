@@ -36,16 +36,31 @@ class Counter: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func startTimer() {
+   @objc func startTimer() {
         let timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerTick), userInfo: nil, repeats: true)
     }
     
     @objc func timerTick() {
         currentScore = currentScore + 1
         setScore(score: currentScore)
-    }
+   }
     
     func setScore(score:Int){
+        
+        if (score == 30) {
+            setLevel(level: 1);
+        }
+        if (score == 60) {
+            setLevel(level: 2);
+        }
+        if (score == 120) {
+            setLevel(level: 3);
+        }
+        
+        if (score == 180) {
+            setLevel(level: 4);
+        }
+        
         counterScore!.text = "Score " + String(score)
     }
     
@@ -53,3 +68,4 @@ class Counter: UIView {
          counterLevel!.text = "Level " + String(level)
  }
 }
+
