@@ -16,9 +16,11 @@ class Counter: UIView {
     var counterScore:UILabel?
     var counterLevel:UILabel?
     var currentScore:Int = 0
+    var tom:Animal
     
-    init() {
+    init(tomAnimal:Animal) {
         
+        tom = tomAnimal
         let screenSize: CGRect = UIScreen.main.bounds
         super.init(frame: CGRect(x: 0, y: 0, width:screenSize.width, height:50))
         self.backgroundColor = UIColor.green
@@ -48,21 +50,26 @@ class Counter: UIView {
     func setScore(score:Int){
         
         if (score == 15) {
-            setLevel(level: 1);
+            setLevel(level: 1)
+            tom.setspeed(level: 7)
         }
         if (score == 30) {
-            setLevel(level: 2);
+            setLevel(level: 2)
+            tom.setspeed(level: 6)
         }
         if (score == 45) {
-            setLevel(level: 3);
+            setLevel(level: 3)
+            tom.setspeed(level: 5)
         }
         
         if (score == 60) {
-            setLevel(level: 4);
+            setLevel(level: 4)
+            tom.setspeed(level: 4)
         }
         
         if (score == 75) {
-            setLevel(level: 5);
+            setLevel(level: 5)
+            tom.setspeed(level: 3)
         }
         
         counterScore!.text = "Score " + String(score)
