@@ -10,7 +10,6 @@ import UIKit
 import Foundation
 
 class IntroViewController: UIViewController {
-    
     @IBOutlet weak var playButton: UIImageView!
     
     override func viewDidLoad() {
@@ -22,13 +21,11 @@ class IntroViewController: UIViewController {
         playButton.isUserInteractionEnabled = true
         
     }
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//     //self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
-//    }
 
     @objc func tbplay(sender: UITapGestureRecognizer) {
-        self.performSegue(withIdentifier: "SecondViewSegue", sender: self)
+        
+        self.present(GameViewController(), animated: true)
+        
         print("bird")
     }
     

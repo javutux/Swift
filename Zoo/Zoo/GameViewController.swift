@@ -75,6 +75,24 @@ class GameViewController: UIViewController {
         print("JERRY: x:" + jx + " y:" + jy + " w:" + jw + " h:" + jh)
         print("TOM: x:" + tx + " y:" + ty + " w:" + tw + " h:" + th)
         print("ISCATCH:" + String(isCatch))
+   
+        if isCatch == true {
+            
+            notification()
+            
+        }
+    }
+    
+    
+    @objc func notification() {
+        
+        let alertController = UIAlertController(title: "Game Over", message: "Click OK if you want to re-start the Game", preferredStyle: .alert)
+        
+        let backToSignIn = UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "SecondViewSegue", sender: Notification.self)})
+        alertController.addAction(backToSignIn)
+        self.present(alertController, animated: true, completion: nil)
+        
+    
     }
     
     
