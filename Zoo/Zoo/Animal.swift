@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Darwin
 
 class Animal: UIView {
     
@@ -37,6 +38,8 @@ class Animal: UIView {
         self.imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         self.addSubview(imageView)
+        
+        startThinking()
     }
     
 //API = PUBLIC FUNCTIONS
@@ -70,13 +73,35 @@ class Animal: UIView {
         let x = Int(target.frame.origin.x)
         let y = Int(target.frame.origin.y)
         setTarget(valuex: x, valuey: y)
-        print("gooood")
     }
     
     func setTarget(valuex:Int,valuey:Int) {
-        UIView.animate(withDuration: TimeInterval(speed)) {
-            self.frame.origin = CGPoint(x: valuex, y: valuey)
-        }
+
+//Animation
+        
+        targetX = CGFloat(valuex)
+        targetY = CGFloat(valuey)
+        
+    }
+    
+    @objc func startThinking() {
+        let timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(thingingTick), userInfo: nil, repeats: true)
+    }
+    
+    var targetX:CGFloat = 0
+    var targetY:CGFloat = 0
+
+    var currentX:CGFloat = 0
+    var currentY:CGFloat = 0
+    
+    
+    @objc func thingingTick() {
+        let o = self.frame.origin
+        
+        currentX = o.x + ((targetX - o.x) / (10 + CGFloat(speed)))
+        currentY = o.y + ((targetY - o.y) / (10 + CGFloat(speed)))
+        
+        self.frame.origin = CGPoint(x: currentX, y: currentY)
     }
     
     required init?(coder aDecoder: NSCoder) {

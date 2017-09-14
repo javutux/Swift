@@ -16,7 +16,6 @@ class GameViewController: UIViewController {
     var jerry:Animal = Animal()
     var tom:Animal = Animal()
     
-    
     //FUNCTIONS
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +29,13 @@ class GameViewController: UIViewController {
         tom.nameMe(title: "Tom")
         tom.setImage(imageName: "Tom")
         tom.move()
-        tom.setLocation(valuex: screenWidth/2 - 50, valuey: screenHeight - 120)
+        tom.setTarget(valuex: screenWidth/2 - 50, valuey: screenHeight - 120)
         tom.setspeed(level: 8)
         
         jerry.nameMe(title: "Jerry")
         jerry.setImage(imageName: "Jerry")
         jerry.eat()
-        jerry.setLocation(valuex: screenWidth/2 - 50, valuey: 50)
+        jerry.setTarget(valuex: screenWidth/2 - 50, valuey: 50)
         jerry.setspeed(level: 2)
         
         counter.startTimer()
@@ -48,12 +47,37 @@ class GameViewController: UIViewController {
 
         view.backgroundColor = UIColor.blue
         
-        
+        startCollisionTimer()
         
         let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(GameViewController.bgTapped))
         view.addGestureRecognizer(gesture)
     
     }
+    
+    @objc func startCollisionTimer() {
+        let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(collisionCheck), userInfo: nil, repeats: true)
+    }
+    
+    @objc func collisionCheck() {
+        
+        let isCatch = jerry.frame.intersects(tom.frame)
+        
+        
+        let jw = String(describing: jerry.frame.width)
+        let jh = String(describing: jerry.frame.height)
+        let jx = String(describing: jerry.frame.minX)
+        let jy = String(describing: jerry.frame.minY)
+        
+        let tw = String(describing: tom.frame.width)
+        let th = String(describing: tom.frame.height)
+        let tx = String(describing: tom.frame.minX)
+        let ty = String(describing: tom.frame.minY)
+        print("JERRY: x:" + jx + " y:" + jy + " w:" + jw + " h:" + jh)
+        print("TOM: x:" + tx + " y:" + ty + " w:" + tw + " h:" + th)
+        print("ISCATCH:" + String(isCatch))
+    }
+    
+    
     
     @objc
     func bgTapped(sender: UITapGestureRecognizer) {
@@ -63,12 +87,12 @@ class GameViewController: UIViewController {
         jerry.setTarget(valuex: px - 50, valuey: py - 50)
         tom.chaseAnimal(target: jerry)
         print("Location: " + String(describing: px) + ":" + String (describing: py))
-    }
 
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+     
     }
 
 }
