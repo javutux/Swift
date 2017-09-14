@@ -26,7 +26,6 @@ class IntroViewController: UIViewController {
         
         self.present(GameViewController(), animated: true)
         
-        print("bird")
     }
     
     override func didReceiveMemoryWarning() {
