@@ -13,7 +13,6 @@
         <!--Score View Controller-->
         <scene sceneID="efo-Pi-waW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8TY-ST-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="z3m-qq-bY2" customClass="ScoreViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="rI2-Bj-pL3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -22,6 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="7RS-iP-Gzw"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TY-ST-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2580" y="354"/>
         </scene>
@@ -62,7 +62,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcn-ox-fyW">
                                 <rect key="frame" x="25" y="352" width="334" height="228"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82437400670000005" green="1" blue="0.41862978769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.81206315755844116" green="0.96149760484695435" blue="0.41975170373916626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Tom &amp; Jerry Game   It was designed for the 7-10 years old pupils.   Jerry needs to escape from Tom, thus use tapping to run away.</string>
                                 <color key="textColor" red="0.2897308166" green="0.13766954810000001" blue="0.51364151550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
