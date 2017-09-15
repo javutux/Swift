@@ -10,6 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Score View Controller-->
+        <scene sceneID="efo-Pi-waW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TY-ST-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="z3m-qq-bY2" customClass="ScoreViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="rI2-Bj-pL3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="7RS-iP-Gzw"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2580" y="354"/>
+        </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,7 +35,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="view" destination="8bC-Xf-vdC" id="h6k-6N-MZz"/>
                         <outletCollection property="Controllermain" destination="8bC-Xf-vdC" collectionClass="NSMutableArray" id="DFX-8x-w9y"/>
                     </connections>
                 </viewController>
@@ -36,32 +55,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6f3-2" translatesAutoresizingMaskIntoConstraints="NO" id="9VJ-KD-UON">
+                                <rect key="frame" x="16" y="91" width="343" height="190"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcn-ox-fyW">
+                                <rect key="frame" x="25" y="352" width="334" height="228"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.82437400670000005" green="1" blue="0.41862978769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Tom &amp; Jerry Game   It was designed for the 7-10 years old pupils.   Jerry needs to escape from Tom, thus use tapping to run away.</string>
+                                <color key="textColor" red="0.2897308166" green="0.13766954810000001" blue="0.51364151550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="opo" translatesAutoresizingMaskIntoConstraints="NO" id="y6t-P2-Ca8">
+                                <rect key="frame" x="65" y="569" width="99" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Pay button" image="6f3" highlightedImage="6f3" translatesAutoresizingMaskIntoConstraints="NO" id="ht1-h3-auC">
-                                <rect key="frame" x="227" y="576" width="91" height="59"/>
+                                <rect key="frame" x="222" y="579" width="99" height="59"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
                                 </userDefinedRuntimeAttributes>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0AU-O9-0aV" colorLabel="IBBuiltInLabel-Green">
-                                <rect key="frame" x="57" y="340" width="261" height="210"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82437400670000005" green="1" blue="0.41862978769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">Tom &amp; Jerry Game   It was designed for the 7-10 years old pupils.   Jerry needs to escape from Tom, thus use tapping to run away.</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.28973081655736455" green="0.13766954807606008" blue="0.51364151554404147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="21" name="Arial-BoldMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6f3-2" translatesAutoresizingMaskIntoConstraints="NO" id="9VJ-KD-UON">
-                                <rect key="frame" x="16" y="109" width="343" height="190"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.81206315755844116" green="0.96149760484695435" blue="0.41975170373916626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,11 +89,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbw-ut-flN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="357"/>
+            <point key="canvasLocation" x="1088.8" y="356.67166416791605"/>
         </scene>
     </scenes>
     <resources>
         <image name="6f3" width="132" height="60"/>
         <image name="6f3-2" width="2395" height="1556"/>
+        <image name="opo" width="600" height="700"/>
     </resources>
 </document>

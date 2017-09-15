@@ -16,6 +16,7 @@
 		FF1A4A4D1F488B9E00E91CBD /* ZooTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A4C1F488B9E00E91CBD /* ZooTests.swift */; };
 		FF1A4A581F488B9F00E91CBD /* ZooUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A571F488B9F00E91CBD /* ZooUITests.swift */; };
 		FF1A4A661F488D4300E91CBD /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A4A651F488D4300E91CBD /* Animal.swift */; };
+		FF26C12A1F6BE0070090A87A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF26C1291F6BE0070090A87A /* ScoreViewController.swift */; };
 		FF2A4BE01F671AC70006B5D5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */; };
 		FF76D1A21F62FC6000099619 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76D1A11F62FC6000099619 /* Counter.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		FF1A4A571F488B9F00E91CBD /* ZooUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooUITests.swift; sourceTree = "<group>"; };
 		FF1A4A591F488B9F00E91CBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF1A4A651F488D4300E91CBD /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		FF26C1291F6BE0070090A87A /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		FF76D1A11F62FC6000099619 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,10 +111,11 @@
 				FF1A4A381F488B9D00E91CBD /* Main.storyboard */,
 				FF1A4A401F488B9D00E91CBD /* LaunchScreen.storyboard */,
 				FF1A4A341F488B9D00E91CBD /* AppDelegate.swift */,
+				FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */,
 				FF1A4A361F488B9D00E91CBD /* GameViewController.swift */,
+				FF26C1291F6BE0070090A87A /* ScoreViewController.swift */,
 				FF76D1A11F62FC6000099619 /* Counter.swift */,
 				FF1A4A651F488D4300E91CBD /* Animal.swift */,
-				FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */,
 			);
 			path = Zoo;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF1A4A4D1F488B9E00E91CBD /* ZooTests.swift in Sources */,
+				FF26C12A1F6BE0070090A87A /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

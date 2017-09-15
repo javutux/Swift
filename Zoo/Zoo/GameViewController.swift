@@ -83,22 +83,21 @@ class GameViewController: UIViewController {
         }
     }
     
-//    tbplay(sender: UITapGestureRecognizer) {
-//
-//    self.present(GameViewController(), animated: true)
-  
+    
     @objc func notification() {
         
-        var alertController = UIAlertController(title: "Game Over", message: "Click OK if you want to re-start the Game", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Game Over", message: "Click OK if you want to re-start the Game", preferredStyle: .alert)
         
-        var backToSignIn = UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "SecondViewSegue", sender: UITapGestureRecognizer.self)})
+        let backToSignIn = UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "GoBack", sender: Notification.self) })
+        
         alertController.addAction(backToSignIn)
+       
         self.present(alertController, animated: true, completion: nil)
         
     
     }
-    
 
+    
     @objc
     func bgTapped(sender: UITapGestureRecognizer) {
         let point = sender.location(in: self.view)
