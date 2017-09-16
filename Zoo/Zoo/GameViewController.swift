@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     //VARIABLES
     var jerry:Animal = Animal()
     var tom:Animal = Animal()
+    var timer:Timer?
     
     //FUNCTIONS
     override func viewDidLoad() {
@@ -55,7 +56,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func startCollisionTimer() {
-        let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(collisionCheck), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(collisionCheck), userInfo: nil, repeats: true)
     }
     
     @objc func collisionCheck() {
@@ -77,7 +78,7 @@ class GameViewController: UIViewController {
         print("ISCATCH:" + String(isCatch))
    
         if isCatch == true {
-            
+            timer!.invalidate()
             notification()
             
         }
@@ -88,7 +89,10 @@ class GameViewController: UIViewController {
         
         let alertController = UIAlertController(title: "Game Over", message: "Click OK if you want to re-start the Game", preferredStyle: .alert)
         
-        let backToSignIn = UIAlertAction(title: "OK", style: .default, handler: { action in self.performSegue(withIdentifier: "GoBack", sender: Notification.self) })
+        let backToSignIn = UIAlertAction(title: "OK", style: .default, handler: {action in
+
+            self.dismiss(animated: false, completion: {})
+        })
         
         alertController.addAction(backToSignIn)
        

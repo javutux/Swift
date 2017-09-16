@@ -16,9 +16,12 @@ class IntroViewController: UIViewController {
         super.viewDidLoad()
         
         let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(IntroViewController.tbplay))
-        playButton.addGestureRecognizer(gesture)
         
-        playButton.isUserInteractionEnabled = true
+        if(playButton != nil) {
+            playButton.addGestureRecognizer(gesture)
+            playButton.isUserInteractionEnabled = true
+        }
+       
         
     }
 
