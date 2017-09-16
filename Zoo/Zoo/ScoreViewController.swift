@@ -8,3 +8,29 @@
 
 import UIKit
 import Foundation
+
+
+
+class ScoreViewController: UIViewController {
+    
+    /// VARIABLES
+    
+   
+    
+    ////Function
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.blue
+        
+    }
+    ////-----------------
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}
+
+
+
+

@@ -10,21 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Score View Controller-->
-        <scene sceneID="efo-Pi-waW">
-            <objects>
-                <viewController id="z3m-qq-bY2" customClass="ScoreViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="rI2-Bj-pL3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="7RS-iP-Gzw"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8TY-ST-l6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2580" y="354"/>
-        </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -35,9 +20,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="view" destination="8bC-Xf-vdC" id="h6k-6N-MZz"/>
                         <outletCollection property="Controllermain" destination="8bC-Xf-vdC" collectionClass="NSMutableArray" id="DFX-8x-w9y"/>
@@ -46,6 +28,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1873" y="354"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="Uok-nf-fIg">
+            <objects>
+                <viewController storyboardIdentifier="scoreView" id="3p9-Ec-Tqi" customClass="ScoreViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="fWo-DY-pkN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3r-hk-nsF">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="2KU-YB-px6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGB-ei-G25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="-360"/>
+        </scene>
+        <!--Booo Yaa-->
+        <scene sceneID="wnV-bF-gYt">
+            <objects>
+                <viewController id="EYg-oe-HJm" customClass="BoooYaa" customModule="Zoo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="UkL-QG-xjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="KcQ-Ww-8bc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tf-Ff-Pfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-356" y="421"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="KNA-rm-0e0">
@@ -84,6 +103,7 @@
                         <viewLayoutGuide key="safeArea" id="blz-Uj-TqE"/>
                     </view>
                     <connections>
+                        <outlet property="ScoreButton" destination="y6t-P2-Ca8" id="4Q0-bz-ZGl"/>
                         <outlet property="playButton" destination="ht1-h3-auC" id="iy4-l9-G9G"/>
                     </connections>
                 </viewController>
@@ -97,4 +117,5 @@
         <image name="6f3-2" width="2395" height="1556"/>
         <image name="opo" width="600" height="700"/>
     </resources>
+    <color key="tintColor" red="0.81206315760000003" green="0.96149760480000002" blue="0.41975170369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

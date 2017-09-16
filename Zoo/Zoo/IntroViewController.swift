@@ -9,11 +9,23 @@
 import UIKit
 import Foundation
 
+
+
 class IntroViewController: UIViewController {
-    @IBOutlet weak var playButton: UIImageView!
+  
+    /// VARIABLES
     
+    @IBOutlet weak var playButton: UIImageView!
+    @IBOutlet weak var scoreButton: UIImageView!
+    
+    ////Function
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let getsc:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(IntroViewController.scplay))
+        
+        scoreButton.addGestureRecognizer(getsc)
+        scoreButton.isUserInteractionEnabled = true
         
         let gesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(IntroViewController.tbplay))
         
@@ -25,12 +37,26 @@ class IntroViewController: UIViewController {
         
     }
 
+    //-----------
     @objc func tbplay(sender: UITapGestureRecognizer) {
         
         self.present(GameViewController(), animated: true)
         
     }
+    //-----------
     
+
+
+    @objc func scplay(sender: UITapGestureRecognizer) {
+        //self.present(ScoreViewController(), animated: true)
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "scoreView")
+        self.present(controller, animated: true, completion: nil)
+        
+    }
+    ////-----------------
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
