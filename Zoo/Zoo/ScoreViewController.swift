@@ -19,7 +19,7 @@ class ScoreViewController: UIViewController, UIScrollViewDelegate {
     var imageView: UIImageView!
     var info:UITextView!
     
-    
+    @IBOutlet weak var foreground: UIScrollView!
     
     ////FUNCTION
     override func viewDidLoad() {
@@ -27,7 +27,13 @@ class ScoreViewController: UIViewController, UIScrollViewDelegate {
         
         view.backgroundColor = UIColor.blue
 
-        
+    
+        foreground.delegate = self
+      
+        func scrollViewDidScroll(scrollView: UIScrollView) {
+            
+      
+        }
     }
     
     
