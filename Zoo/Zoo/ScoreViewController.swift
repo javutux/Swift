@@ -17,17 +17,21 @@ class ScoreViewController: UIViewController, UIScrollViewDelegate {
 
     var scrollView: UIScrollView!
     var imageView: UIImageView!
-    var data:UITextView!
+    var info:UITextView!
     
     
     
-    ////Function
+    ////FUNCTION
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.blue
+
         
     }
+    
+    
+    
 
     
     ////-----------------

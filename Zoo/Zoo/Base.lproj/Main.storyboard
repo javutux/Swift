@@ -34,18 +34,22 @@
             <objects>
                 <viewController storyboardIdentifier="scoreView" id="3p9-Ec-Tqi" customClass="ScoreViewController" customModule="Zoo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="fWo-DY-pkN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zXR-ZF-UiD">
-                                <rect key="frame" x="37" y="118" width="300" height="496"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QBD-3o-G5e">
+                                <rect key="frame" x="0.0" y="400" width="375" height="800"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuk" translatesAutoresizingMaskIntoConstraints="NO" id="HlX-Iv-TqP">
-                                        <rect key="frame" x="0.0" y="201" width="300" height="295"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuk" translatesAutoresizingMaskIntoConstraints="NO" id="wdE-HI-aKy">
+                                        <rect key="frame" x="0.0" y="-11" width="423" height="750"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="800" id="Av5-al-mEV"/>
+                                    <constraint firstAttribute="width" constant="600" id="XBc-N7-byJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="f7C-uR-fe1"/>
+                                </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3r-hk-nsF">
                                 <rect key="frame" x="37" y="50" width="61" height="41"/>
@@ -55,14 +59,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QBD-3o-G5e" firstAttribute="leading" secondItem="2KU-YB-px6" secondAttribute="leading" id="3vh-9M-2BK"/>
+                            <constraint firstItem="QBD-3o-G5e" firstAttribute="trailing" secondItem="2KU-YB-px6" secondAttribute="trailing" id="56v-de-nfq"/>
+                            <constraint firstItem="QBD-3o-G5e" firstAttribute="top" secondItem="fWo-DY-pkN" secondAttribute="top" id="ByR-dA-CDj"/>
+                            <constraint firstItem="QBD-3o-G5e" firstAttribute="bottom" secondItem="2KU-YB-px6" secondAttribute="bottom" id="Jhy-48-HvH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2KU-YB-px6"/>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGB-ei-G25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1792.8" y="-360.2698650674663"/>
+            <point key="canvasLocation" x="1792.8" y="-360.71964017991007"/>
         </scene>
         <!--Booo Yaa-->
         <scene sceneID="wnV-bF-gYt">
