@@ -15,8 +15,6 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     private var myArray: [UserData] = []
     private var myTableView: UITableView!
-    private var name: String?
-    private var score: Int?
     
     ////FUNCTION
     
@@ -25,7 +23,8 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //FAKE DATA-------------------------
         
-        myArray.append(UserData(name: name, score: score))
+        myArray.append(UserData(username: "tom", userscore: 7))
+        myArray.append(UserData(username: "sam", userscore: 98))
         
         //FAKE DATA-------------------------
         

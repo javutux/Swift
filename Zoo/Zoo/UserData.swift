@@ -15,11 +15,12 @@ class UserData {
     var name: String?
     var score: Int?
     
-    //I will creat a constructor function named init thta accepts two parameters called name and score that rae of types string and integer
-
-    init(name: String?, score: Int?) {
-        self.name = "Tom"
-        self.score = 10
+    //I will create a constructor function named init that accepts two parameters called name and score that rae of types string and integer
+    
+    init(username: String?, userscore: Int?) {
+//
+        self.name = username!
+        self.score = userscore!
         
     }
 }

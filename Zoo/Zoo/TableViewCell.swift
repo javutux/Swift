@@ -28,7 +28,6 @@ class TableViewCell: UITableViewCell {
 
     func setScore(user:UserData) {
         self.textLabel!.text = String(describing: user.score)
-//        print("BOOO! " + user.score!)
         
     }
     
