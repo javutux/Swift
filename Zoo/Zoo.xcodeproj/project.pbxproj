@@ -19,6 +19,8 @@
 		FF2A4BE01F671AC70006B5D5 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */; };
 		FF76D1A21F62FC6000099619 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF76D1A11F62FC6000099619 /* Counter.swift */; };
 		FF86978C1F6D2B0D00F68629 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF86978B1F6D2B0D00F68629 /* ScoreViewController.swift */; };
+		FFC20FCD1F7A699900E77F45 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC20FCC1F7A699900E77F45 /* UserData.swift */; };
+		FFC20FCF1F7A72FF00E77F45 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC20FCE1F7A72FF00E77F45 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		FF2A4BDF1F671AC70006B5D5 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		FF76D1A11F62FC6000099619 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		FF86978B1F6D2B0D00F68629 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		FFC20FCC1F7A699900E77F45 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FFC20FCE1F7A72FF00E77F45 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 				FF76D1A11F62FC6000099619 /* Counter.swift */,
 				FF1A4A651F488D4300E91CBD /* Animal.swift */,
 				FF86978B1F6D2B0D00F68629 /* ScoreViewController.swift */,
+				FFC20FCE1F7A72FF00E77F45 /* TableViewCell.swift */,
+				FFC20FCC1F7A699900E77F45 /* UserData.swift */,
 			);
 			path = Zoo;
 			sourceTree = "<group>";
@@ -271,6 +277,8 @@
 			files = (
 				FF86978C1F6D2B0D00F68629 /* ScoreViewController.swift in Sources */,
 				FF76D1A21F62FC6000099619 /* Counter.swift in Sources */,
+				FFC20FCD1F7A699900E77F45 /* UserData.swift in Sources */,
+				FFC20FCF1F7A72FF00E77F45 /* TableViewCell.swift in Sources */,
 				FF1A4A3D1F488B9D00E91CBD /* Zoo.xcdatamodeld in Sources */,
 				FF1A4A661F488D4300E91CBD /* Animal.swift in Sources */,
 				FF2A4BE01F671AC70006B5D5 /* IntroViewController.swift in Sources */,

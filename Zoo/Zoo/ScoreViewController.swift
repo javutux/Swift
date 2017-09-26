@@ -15,10 +15,10 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     /// VARIABLES
 
-    private let myArray: NSArray = ["First","Second","Third"]
+    private let myArray: NSArray = ["Poo","Blah","Crap"]
     private var myTableView: UITableView!
-    
-    
+    private var name: String?
+    private var score: String?
     
     ////FUNCTION
     
@@ -32,7 +32,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         let displayHeight: CGFloat = self.view.frame.height
         
         myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        myTableView.register(TableViewCell.self, forCellReuseIdentifier: "MyCell")
         myTableView.dataSource = self
         myTableView.delegate = self
         self.view.addSubview(myTableView)
@@ -78,5 +78,4 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
 }
-
 
