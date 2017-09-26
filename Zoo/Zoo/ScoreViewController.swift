@@ -11,16 +11,14 @@ import Foundation
 
 
 
-class ScoreViewController: UIViewController, UIScrollViewDelegate {
+class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     /// VARIABLES
 
-    var scrollView: UIScrollView!
-    var imageView: UIImageView!
-    var info:UITableViewDataSource!
+    private let myArray: NSArray = ["First","Second","Third"]
+    private var myTableView: UITableView!
     
     
-    @IBOutlet weak var foreground: UIScrollView!
     
     ////FUNCTION
     
@@ -28,26 +26,48 @@ class ScoreViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.blue
+        
+        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
+        
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+        myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        myTableView.dataSource = self
+        myTableView.delegate = self
+        self.view.addSubview(myTableView)
 
-        foreground.delegate = self
-      
+
         
-        
-        func scrollViewDidScroll(scrollView: UIScrollView) {
-            
-       
-        }
     }
     
-    @objc func scplay(sender: UITapGestureRecognizer) {
-        //self.present(ScoreViewController(), animated: true)
-        
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "scoreView")
-        self.present(controller, animated: true, completion: nil)
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Num: \(indexPath.row)")
+        print("Value: \(myArray[indexPath.row])")
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
+        cell.textLabel!.text = "\(myArray[indexPath.row])"
+        return cell
+    }
+    
+    
+    
+//    @objc func scplay(sender: UITapGestureRecognizer) {
+//        //self.present(ScoreViewController(), animated: true)
+//
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: "scoreView")
+//        self.present(controller, animated: true, completion: nil)
+//
+//    }
 
     
     ////-----------------
@@ -55,7 +75,7 @@ class ScoreViewController: UIViewController, UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
   
     
-}
+    }
 
 }
 
