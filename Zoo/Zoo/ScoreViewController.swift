@@ -9,8 +9,6 @@
 import UIKit
 import Foundation
 
-
-
 class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     /// VARIABLES
@@ -18,7 +16,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     private var myArray: [UserData] = []
     private var myTableView: UITableView!
     private var name: String?
-    private var score: String?
+    private var score: Int?
     
     ////FUNCTION
     
@@ -27,9 +25,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //FAKE DATA-------------------------
         
-        var u = UserData()
-        u.name = "gfhfghgfhgfhf"
-        myArray.append(u)
+        myArray.append(UserData(name: name, score: score))
         
         //FAKE DATA-------------------------
         

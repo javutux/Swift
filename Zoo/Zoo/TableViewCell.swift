@@ -12,6 +12,7 @@ class TableViewCell: UITableViewCell {
 
     ////VARIABLE
 
+    var score = Int()
 
     ///FUNCTION
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -20,25 +21,16 @@ class TableViewCell: UITableViewCell {
     }
     
     func setUser(user:UserData) {
-        self.textLabel!.text = user.name
-
+        self.textLabel!.text = user.name 
         print("BOOO! " + user.name!)
+    
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+    func setScore(user:UserData) {
+        self.textLabel!.text = String(describing: user.score)
+//        print("BOOO! " + user.score!)
+        
+    }
     
     
     required init(coder aDecoder: NSCoder) {

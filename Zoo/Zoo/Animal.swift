@@ -68,7 +68,7 @@ class Animal: UIView {
     func setLocation(valuex:Int,valuey:Int){
         self.frame.origin = CGPoint(x: valuex, y: valuey)
     }
-    
+    ///I have created a function called chaseAnimal that accepts one parameter named target of a type Animal
     func chaseAnimal(target:Animal) {
         let x = Int(target.frame.origin.x)
         let y = Int(target.frame.origin.y)
