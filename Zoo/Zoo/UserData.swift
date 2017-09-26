@@ -11,5 +11,5 @@ import UIKit
 
 class UserData {
     var name: String?
-    var score: String?
+    var score: Int?
 }

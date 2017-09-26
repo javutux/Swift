@@ -15,7 +15,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     /// VARIABLES
 
-    private let myArray: NSArray = ["Poo","Blah","Crap"]
+    private var myArray: [UserData] = []
     private var myTableView: UITableView!
     private var name: String?
     private var score: String?
@@ -24,6 +24,15 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //FAKE DATA-------------------------
+        
+        var u = UserData()
+        u.name = "gfhfghgfhgfhf"
+        myArray.append(u)
+        
+        //FAKE DATA-------------------------
+        
         
         view.backgroundColor = UIColor.blue
         
@@ -36,11 +45,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         myTableView.dataSource = self
         myTableView.delegate = self
         self.view.addSubview(myTableView)
-
-
-        
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Num: \(indexPath.row)")
@@ -52,23 +57,18 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath)
-        cell.textLabel!.text = "\(myArray[indexPath.row])"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath as IndexPath) as! TableViewCell
+        cell.setUser(user:(myArray[indexPath.row]))
         return cell
     }
     
-    
-    
-//    @objc func scplay(sender: UITapGestureRecognizer) {
-//        //self.present(ScoreViewController(), animated: true)
-//
-//
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let controller = storyboard.instantiateViewController(withIdentifier: "scoreView")
-//        self.present(controller, animated: true, completion: nil)
-//
-//    }
+    @objc func scplay(sender: UITapGestureRecognizer) {
 
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "scoreView")
+        self.present(controller, animated: true, completion: nil)
+
+    }
     
     ////-----------------
     override func didReceiveMemoryWarning() {
