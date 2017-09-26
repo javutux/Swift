@@ -35,7 +35,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
         
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+        myTableView = UITableView(frame: CGRect(x: 0, y: 200, width: displayWidth, height: displayHeight - barHeight))
         myTableView.register(TableViewCell.self, forCellReuseIdentifier: "MyCell")
         myTableView.dataSource = self
         myTableView.delegate = self

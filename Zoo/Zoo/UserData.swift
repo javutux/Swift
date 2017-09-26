@@ -11,7 +11,7 @@ import UIKit
 
 class UserData {
     
-    //I have created an optional variable called name of the type string with no assign value (assigned value is when = "Tom", etc.)
+    //I have created an optional variable called name of the type string with no assign value (assigned value is when = "Tom", etc. )
     var name: String?
     var score: Int?
     
