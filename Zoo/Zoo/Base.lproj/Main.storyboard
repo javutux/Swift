@@ -36,31 +36,25 @@
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="fWo-DY-pkN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="playback" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s2g-1t-oVs">
+                                <rect key="frame" x="16" y="59" width="56" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="2KU-YB-px6"/>
                     </view>
                     <navigationItem key="navigationItem" id="VO0-WX-Kfa"/>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="s2g-1t-oVs" id="QKK-zT-ZcU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGB-ei-G25" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1014" y="-937"/>
-        </scene>
-        <!--Booo Yaa-->
-        <scene sceneID="wnV-bF-gYt">
-            <objects>
-                <viewController id="EYg-oe-HJm" customClass="BoooYaa" customModule="Zoo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="UkL-QG-xjW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="KcQ-Ww-8bc"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Tf-Ff-Pfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-356" y="421"/>
+            <point key="canvasLocation" x="357.60000000000002" y="-90.404797601199405"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="KNA-rm-0e0">
@@ -71,11 +65,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="6f3-2" translatesAutoresizingMaskIntoConstraints="NO" id="9VJ-KD-UON">
-                                <rect key="frame" x="16" y="91" width="343" height="190"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="35" y="52" width="305" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcn-ox-fyW">
-                                <rect key="frame" x="25" y="352" width="334" height="228"/>
+                                <rect key="frame" x="25" y="242" width="334" height="212"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.81206315755844116" green="0.96149760484695435" blue="0.41975170373916626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Tom &amp; Jerry Game   It was designed for the 7-10 years old pupils.   Jerry needs to escape from Tom, thus use tapping to run away.</string>
@@ -84,12 +78,12 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="opo" translatesAutoresizingMaskIntoConstraints="NO" id="y6t-P2-Ca8">
-                                <rect key="frame" x="65" y="569" width="99" height="97"/>
+                                <rect key="frame" x="52" y="495" width="92" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="Pay button" image="6f3" highlightedImage="6f3" translatesAutoresizingMaskIntoConstraints="NO" id="ht1-h3-auC">
-                                <rect key="frame" x="222" y="579" width="99" height="59"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="222" y="495" width="79" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="NO"/>
                                 </userDefinedRuntimeAttributes>
@@ -102,6 +96,7 @@
                     <connections>
                         <outlet property="ScoreButton" destination="y6t-P2-Ca8" id="4Q0-bz-ZGl"/>
                         <outlet property="playButton" destination="ht1-h3-auC" id="iy4-l9-G9G"/>
+                        <segue destination="3p9-Ec-Tqi" kind="showDetail" identifier="backButton" id="g88-nH-Z7U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbw-ut-flN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,6 +107,7 @@
     <resources>
         <image name="6f3" width="132" height="60"/>
         <image name="6f3-2" width="2395" height="1556"/>
+        <image name="back" width="600" height="275"/>
         <image name="opo" width="600" height="700"/>
     </resources>
     <color key="tintColor" red="0.81206315760000003" green="0.96149760480000002" blue="0.41975170369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

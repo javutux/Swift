@@ -43,19 +43,17 @@ class IntroViewController: UIViewController {
         self.present(GameViewController(), animated: true)
         
     }
-    //-----------
     
-
+    //-----------
 
     @objc func scplay(sender: UITapGestureRecognizer) {
-        //self.present(ScoreViewController(), animated: true)
-        
-        
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "scoreView")
         self.present(controller, animated: true, completion: nil)
         
     }
+    
     ////-----------------
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
